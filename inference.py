@@ -1,3 +1,2 @@
-# Minimal placeholder for OpenEnv
 def inference():
-    pass
+    return"ok"
