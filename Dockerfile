@@ -1,6 +1,9 @@
-FROM python:3.11-slim
+FROM python:3.10-slim
+
 WORKDIR /app
-COPY . .
-RUN pip install fastapi uvicorn pydantic
-EXPOSE 8000
+
+COPY . /app
+
+RUN pip install --no-cache-dir fastapi uvicorn pydantic
+
 CMD ["uvicorn", "server.app:app", "--host", "0.0.0.0", "--port", "8000"]
